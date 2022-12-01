@@ -459,7 +459,7 @@ class QuickNoteDialog(Dialog):
 		notebook.store_page(page)
 
 	def import_attachments(self, notebook, path, dir):
-		dir = adapt_from_oldfs(fir)
+		dir = adapt_from_oldfs(dir)
 		attachments = notebook.get_attachments_dir(path)
 		for name in dir.list_files():
-			file.copyto(attachments)
+			name.copyto(attachments)
